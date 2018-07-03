@@ -1,14 +1,50 @@
 /*
- * Create a list that holds all of your cards
+ * Create a list that holds all of your cards class
  */
+ var cards=['fa fa-diamond',
+            'fa fa-paper-plane-o',
+            'fa fa-anchor',
+            'fa fa-bolt',
+            'fa fa-cube',
+            'fa fa-anchor',
+            'fa fa-leaf',
+            'fa fa-bicycle',
+            'fa fa-diamond',
+            'fa fa-bomb',
+            'fa fa-leaf',
+            'fa fa-bomb',
+            'fa fa-bolt',
+            'fa fa-bicycle',
+            'fa fa-paper-plane-o',
+            'fa fa-cube'
+          ]
 
-
+displayShuffleCards();
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+ function displayShuffleCards(){
+   const shuffledCards=shuffle(cards);
+   const deckObject = document.querySelector(".deck");
+    for(let i=0;i<shuffledCards.length;i++){
+      //create li element and add class
+      let liObject = document.createElement('li');
+      liObject.classList.add('card');
+      liObject.addEventListener('click',function(){
+        cardClicked(shuffledCards[i],liObject);
+      });
+
+      //create i class and add class from shuffled array
+      let iObject = document.createElement('i');
+      iObject.className=shuffledCards[i];
+      liObject.appendChild(iObject);
+
+      deckObject.appendChild(liObject);
+    }
+ }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -36,3 +72,5 @@ function shuffle(array) {
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+function cardClicked(cardClass,cardObject){
+}
