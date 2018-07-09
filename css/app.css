@@ -137,3 +137,38 @@ h1 {
     color: green;
     font-size: 40px;
 }
+
+@media only screen and (max-width: 700px) {
+	.score-panel {
+        width: 90%;
+    }
+
+    .deck {
+        width: 95%;
+        padding: 16px;
+        min-height: 600px;
+    }
+
+    .deck .card {
+      height: 110px;
+      width: 110px;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+	.score-panel {
+        width: 90%;
+    }
+
+    .deck {
+        width: 95%;
+        padding: 16px;
+        min-height: 500px;
+    }
+
+    .deck .card {
+      height: 90px;
+      width: 90px;
+    }
+}
