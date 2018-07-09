@@ -168,9 +168,9 @@ function closeCard(cardObject){
  function incrementCounter(){
    moveCounter++;
    document.querySelector('.moves').innerText=moveCounter;
-   if(moveCounter === 24 || moveCounter === 30){
+   if(moveCounter === 21 || moveCounter === 27){
       let starsObject=document.querySelectorAll('.stars .fa.fa-star');
-      if(moveCounter === 24){
+      if(moveCounter === 21){
         starsObject[0].style.visibility = 'hidden';
       }else{
        starsObject[1].style.visibility = 'hidden';
