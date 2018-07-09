@@ -7,6 +7,7 @@
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 
@@ -22,9 +23,9 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
-
-            <div class="restart">
+        	<span class="moves">0</span> Moves
+          <span class="timer">0</span> Seconds
+          <div class="restart">
         		<i class="fa fa-repeat"></i>
         	</div>
         </section>
@@ -32,7 +33,21 @@
         <ul class="deck">
         </ul>
     </div>
+ <div id="overlay" class="modal">
+   <p>
+     <br><br><br><br><br><br><br><br><br><br>
+       <span class="checkmark">&#10003;</span>
+       <br>
+     <b>Congratulations! You won in <span id="finalTimer"></span> seconds</b>
+     <br>
+     <p> Win <span id="moveCounter"></span> moves and <span id="starsCount"></span> stars
+       <br>
+       <span>Woooooo!</span>
+     </p>
+     <br>
 
+     <p><button class="w3-button w3-aqua" onclick="playAgain()">Play again!</button></p>
+ </div>
     <script src="js/app.js"></script>
 </body>
 </html>
